@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mute the Confusion</title>
+  <style>
+    @font-face {
+      font-family: Sunday;
+      src: url('../fonts/Sunday-Regular.ttf');
+    }
+    html {
+      overflow: hidden;
+      height: 100vh;
+    }
+    body {
+      background-color:black;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #form {
+      display: flex;
+      flex-direction: row;
+    }
+    .title {
+      position: absolute;
+      top: 10%;
+      color: white;
+      font-size: 6rem;
+    }
+    #message {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 18px;
+      width: 40vw;
+      height: 3vh;
+      caret-color: transparent;
+    }
+    #message:focus {
+      outline: none;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      let form = document.getElementById("form")
+      let message = document.getElementById("message")
+      form.addEventListener("submit", (e) => {
+        e.preventDefault()
+        message.value = ''
+        const formData = new FormData(form)
+        fetch('/', {
+          method: 'POST',
+          body: formData
+        })
+      })
+
+      let buttons = document.querySelectorAll('button[id^=button]')
+      buttons.forEach((button) => {
+        button.addEventListener("click", (e) => {
+          fetch(`/buttons/${e.target.id.split("button")[1]}`, {
+            method: 'POST'
+          })
+        })
+      })
+    })
+  </script>
+</head>
+<body>
+  <div class="title">MUTE THE CONFUSION</div>
+  <div class="container">
+    <form id="form">
+      <input type="text" id="message" name="message" placeholder="Describe how you feel..." />
+      <!-- <input type="submit" id="submit"/> -->
+    </form>
+    <!-- <button id="button0">
+      Button0
+    </button>
+    <button id="button1">
+      Button1
+    </button> -->
+  </div>
+
+</body>
+
+</html>
