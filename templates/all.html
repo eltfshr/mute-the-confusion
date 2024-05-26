@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mute the Confusion</title>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", async () => {
+      let messages
+      await fetch('/all_messages').then((res) => {
+        return res.json()
+      }).then((data) => {
+        messages = data.messages
+      })
+
+      let container = document.getElementsByClassName("container")[0]
+      messages.forEach((message, i) => {
+        element = document.createElement("div")
+        element.innerText = i + '. ' + message.owner + ': ' + message.message
+        container.appendChild(element)
+      })
+    })
+  </script>
+</head>
+<body>
+  <div class="container">
+  </div>
+</body>
+
+</html>
