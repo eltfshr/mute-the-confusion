@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="asset/css/style.css" />
+    
+  </head>
+  <body>
+    <div class="computer-input">
+      <div class="overlap-wrapper">
+        <div class="overlap">
+          <img class="rectangle" src="asset/img/rectangle-16.svg" />
+          <img class="img" src="asset/img/rectangle-17.svg" />
+          <img class="group" src="asset/img/group-17.svg" />
+          <div class="div">
+            <div class="text-wrapper">ในแบบของคุณได้ที่นี่ !!</div>
+            <div class="overlap-group">
+              <div class="text-wrapper-2">มาร่วมแบ่งปันวิธีการหา</div>
+              <div class="rectangle-2"></div>
+              <div class="text-wrapper-3">ความสงบ</div>
+            </div>
+            <div class="overlap-2">
+              <div class="text-wrapper-4">ความวุ่นวาย</div>
+              <div class="text-wrapper-5">ท่ามกลาง</div>
+            </div>
+          </div>
+          <img class="line" src="asset/img/line-1.svg" />
+          <div class="user-message-4">ข้อความ</div>
+          <div class="rectangle-3">
+            <input class="user-message" placeholder="พิมพ์ข้อความ">
+          </div>
+          <div class="user-message-3">จาก</div>
+          <div class="rectangle-4"></div>
+          <input class="user-message-2" placeholder="ใส่ชื่อ/นามแฝงของคุณ">
+          <div class="overlap-group-wrapper">
+            <button class="div-wrapper" id="submitBtn"><div class="text-wrapper-6">ยืนยันการส่ง</div></button>
+          </div>
+          <div class="group-2">
+            <button class="overlap-3" id="cancelBtn"><div class="text-wrapper-7">ยกเลิก</div></button>
+          </div>
+        
+          <script>
+            document.getElementById('submitBtn').addEventListener('click', function() {
+              const userMessage = document.querySelector('.user-message').value;
+              const userName = document.querySelector('.user-message-2').value;
+        
+              if (userMessage.trim() === "" || userName.trim() === "") {
+                alert('กรุณาใส่ข้อความและชื่อก่อนทำการส่ง');
+              } else {
+                alert('ส่งข้อความเรียบร้อยแล้ว');
+                // เพิ่มโค้ดสำหรับการส่งข้อมูลที่นี่
+              }
+            });
+        
+            document.getElementById('cancelBtn').addEventListener('click', function() {
+              document.querySelector('.user-message').value = "";
+              document.querySelector('.user-message-2').value = "";
+            });
+          </script>
+          <img class="mute-logo" src="asset/img/mute-logo-1.svg" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

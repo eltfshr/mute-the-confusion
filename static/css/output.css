@@ -1,0 +1,349 @@
+.projector-output {
+  background-color: #8cbfb6;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.projector-output .overlap-wrapper {
+  background-color: #8cbfb6;
+  overflow: hidden;
+  width: 1440px;
+  height: 1024px;
+}
+
+.projector-output .overlap {
+  position: relative;
+  width: 1640px;
+  height: 1189px;
+  top: -162px;
+  left: -100px;
+}
+
+.projector-output .mute-logo {
+  position: absolute;
+  width: 417px;
+  height: 198px;
+  top: 923px;
+  left: 134px;
+}
+
+.projector-output .star {
+  position: absolute;
+  width: 349px;
+  height: 342px;
+  top: 643px;
+  left: 1107px;
+}
+
+.projector-output .img {
+  position: absolute;
+  width: 349px;
+  height: 342px;
+  top: 379px;
+  left: 506px;
+}
+
+.projector-output .group {
+  position: absolute;
+  width: 1640px;
+  height: 1141px;
+  top: 0;
+  left: 0;
+}
+
+.projector-output .star-2 {
+  position: absolute;
+  width: 408px;
+  height: 400px;
+  top: 193px;
+  left: 244px;
+}
+
+.projector-output .star-3 {
+  position: absolute;
+  width: 388px;
+  height: 381px;
+  top: 730px;
+  left: 575px;
+}
+
+.projector-output .star-4 {
+  position: absolute;
+  width: 314px;
+  height: 248px;
+  top: 162px;
+  left: 1226px;
+}
+
+.projector-output .star-5 {
+  position: absolute;
+  width: 275px;
+  height: 270px;
+  top: 341px;
+  left: 947px;
+}
+
+.projector-output .star-6 {
+  position: absolute;
+  width: 230px;
+  height: 306px;
+  top: 620px;
+  left: 100px;
+}
+
+.projector-output .star-wrapper {
+  position: absolute;
+  width: 279px;
+  height: 279px;
+  top: 910px;
+  left: 1272px;
+}
+
+.projector-output .star-7 {
+  position: absolute;
+  width: 255px;
+  height: 250px;
+  top: 15px;
+  left: 12px;
+}
+
+.projector-output .textbox {
+  position: absolute;
+  width: 240px;
+  height: 311px;
+  top: 235px;
+  left: 185px;
+}
+
+.projector-output .overlap-group {
+  position: relative;
+  width: 236px;
+  height: 311px;
+  background-color: #edc663;
+  border-radius: 10px;
+  border: 3px solid;
+  border-color: #b2954b;
+}
+
+.projector-output .box {
+  position: absolute;
+  width: 33px;
+  height: 311px;
+  top: -3px;
+  left: -3px;
+  background-color: #deb54c;
+  border-radius: 10px 0px 0px 10px;
+  border: 3px solid;
+  border-color: #b2954b;
+}
+
+.projector-output .user-message {
+  position: absolute;
+  width: 184px;
+  top: 17px;
+  left: 36px;
+  font-family: "Do Hyeon-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.projector-output .username {
+  position: absolute;
+  width: 110px;
+  top: 270px;
+  left: 96px;
+  font-family: "Do Hyeon-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: right;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.projector-output .overlap-group-wrapper {
+  position: absolute;
+  width: 240px;
+  height: 311px;
+  top: 723px;
+  left: 570px;
+}
+
+.projector-output .div-wrapper {
+  position: absolute;
+  width: 282px;
+  height: 253px;
+  top: 298px;
+  left: 475px;
+}
+
+.projector-output .div {
+  position: relative;
+  width: 278px;
+  height: 253px;
+  background-color: #7aa557;
+  border-radius: 10px;
+  border: 3px solid;
+  border-color: #35571e;
+}
+
+.projector-output .box-2 {
+  width: 36px;
+  height: 253px;
+  background-color: #658947;
+  border-color: #35571e;
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  border-radius: 10px 0px 0px 10px;
+  border: 3px solid;
+}
+
+.projector-output .overlap-group-2 {
+  position: absolute;
+  width: 235px;
+  height: 219px;
+  top: 18px;
+  left: 43px;
+}
+
+.projector-output .text-wrapper {
+  width: 235px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  font-family: "Do Hyeon-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.projector-output .username-2 {
+  width: 121px;
+  top: 201px;
+  left: 96px;
+  position: absolute;
+  font-family: "Do Hyeon-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: right;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.projector-output .textbox-2 {
+  position: absolute;
+  width: 282px;
+  height: 253px;
+  top: 852px;
+  left: 1181px;
+}
+
+.projector-output .textbox-3 {
+  position: absolute;
+  width: 282px;
+  height: 253px;
+  top: 491px;
+  left: 820px;
+}
+
+.projector-output .textbox-4 {
+  position: absolute;
+  width: 240px;
+  height: 311px;
+  top: 224px;
+  left: 1217px;
+}
+
+.projector-output .textbox-5 {
+  position: absolute;
+  width: 349px;
+  height: 217px;
+  top: 221px;
+  left: 801px;
+}
+
+.projector-output .overlap-2 {
+  position: relative;
+  width: 345px;
+  height: 217px;
+  background-color: #c54e39;
+  border-radius: 10px;
+  border: 3px solid;
+  border-color: #7d1907;
+}
+
+.projector-output .box-3 {
+  width: 48px;
+  height: 217px;
+  background-color: #a03a28;
+  border-color: #7d1907;
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  border-radius: 10px 0px 0px 10px;
+  border: 3px solid;
+}
+
+.projector-output .p {
+  width: 269px;
+  top: 11px;
+  left: 54px;
+  position: absolute;
+  font-family: "Do Hyeon-Regular", Helvetica;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.projector-output .username-3 {
+  width: 161px;
+  top: 188px;
+  left: 142px;
+  position: absolute;
+  font-family: "Do Hyeon-Regular", Helvetica;
+  font-weight: 400;
+  color:white;
+  font-size: 16px;
+  text-align: right;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+  /* background-color: #8cbfb6; */
+}
+
+.projector-output .textbox-6 {
+  position: absolute;
+  width: 349px;
+  height: 217px;
+  top: 646px;
+  left: 166px;
+}
+
+.projector-output .textbox-7 {
+  position: absolute;
+  width: 349px;
+  height: 217px;
+  top: 574px;
+  left: 1127px;
+}
+
+.projector-output .textbox-8 {
+  position: absolute;
+  width: 240px;
+  height: 311px;
+  top: 815px;
+  left: 891px;
+}
