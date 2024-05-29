@@ -7,8 +7,23 @@
       display: flex;
       flex-direction: column;
     }
-  </style>
+    @keyframes move {
+            0% {transform: translateY(0px); }
+            50% {transform: translateY(-30px); }
+    }
+    
+    .animation {
+        animation-duration: 0.7s;
+    }
+
+    .animation p {
+      opacity: 1;
+      transition: opacity 0.08s linear;
+    }
+
+</style>
   <script src="{{url_for('static', filename='socket.io.js')}}"></script>
+  <link rel="stylesheet" href="../static/css/output.css" />
   <script>
     const socket = io()
 
@@ -21,13 +36,31 @@
     let currentSwap = 0
 
     function swap(message, owner) {
-      element = document.getElementById(`${currentSwap}`)
-      element.innerText = currentSwap + '. ' + owner + ': ' + message
+      changeText(message, owner, currentSwap)
       currentSwap++
       if (currentSwap > 9) {
         currentSwap = 0
       }
     }
+
+    function changeText(message, owner, i) {
+      messageElement = document.getElementById(`${currentSwap}`)
+      ownerElement = document.getElementById(`o${currentSwap}`)
+      bigElement = document.getElementById(`b${currentSwap}`)
+      
+      bigElement.style.display = 'block'
+      messageElement.style.opacity = '0'
+      ownerElement.style.opacity = '0'
+      bigElement.style.animationName = 'move';
+      
+      setTimeout(() => {
+        messageElement.innerText = message
+        ownerElement.innerText = '-' + owner + '-'
+        bigElement.style.animationName = '';
+        messageElement.style.opacity = '1'
+        ownerElement.style.opacity = '1'
+      }, 600); // Change text at halfway point of the animation
+  }
 
     document.addEventListener("DOMContentLoaded", async () => {
       let messages
@@ -37,24 +70,119 @@
         messages = data.messages
       })
       messages.forEach((message, i) => {
-        element = document.getElementById(`${i}`)
-        element.innerText = i + '. ' + message.owner + ': ' + message.message
+        messageElement = document.getElementById(`${i}`)
+        ownerElement = document.getElementById(`o${i}`)
+        bigElement = document.getElementById(`b${i}`)
+        messageElement.innerText = message.message
+        ownerElement.innerText = '-' + message.owner + '-'
+        bigElement.style.display = 'block'
       })
     })
   </script>
 </head>
 <body>
-  <div class="container">
-    <div id="0"></div>
-    <div id="1"></div>
-    <div id="2"></div>
-    <div id="3"></div>
-    <div id="4"></div>
-    <div id="5"></div>
-    <div id="6"></div>
-    <div id="7"></div>
-    <div id="8"></div>
-    <div id="9"></div>
+  <div class="projector-output">
+    <div class="overlap-wrapper">
+      <div class="overlap">
+        <img class="mute-logo" src="../static/img/mute-logo-2.svg" />
+        <img class="star" src="../static/img/star-10.svg" />
+        <img class="img" src="../static/img/star-15.svg" />
+        <div class="group">
+          <img class="star-2" src="../static/img/star-11.svg" />
+          <img class="star-3" src="../static/img/star-12.svg" />
+          <img class="star-4" src="../static/img/star-13.svg" />
+          <img class="star-5" src="../static/img/star-9.svg" />
+          <img class="star-6" src="../static/img/star-14.svg" />
+        </div>
+        <div class="star-wrapper"><img class="star-7" src="../static/img/group-16.svg" /></div>
+        <div class="textbox animation" style="display: none;" id="b0">
+          <div class="overlap-group">
+            <div class="box"></div>
+            <p class="user-message" id="0">
+            </p>
+            <p class="username" id="o0"></p>
+          </div>
+        </div>
+        <div class="overlap-group-wrapper animation" style="display: none;" id="b1">
+          <div class="overlap-group">
+            <div class="box"></div>
+            <p class="user-message" id="1">
+            </p>
+            <p class="username" id="o1"></p>
+          </div>
+        </div>
+        <div class="div-wrapper animation" style="display: none;" id="b2">
+          <div class="div">
+            <div class="box-2"></div>
+            <div class="overlap-group-2">
+              <p class="text-wrapper" id="2">
+              </p>
+              <p class="username-2" id="o2"></p>
+            </div>
+          </div>
+        </div>
+        <div class="textbox-2 animation" style="display: none;" id="b3">
+          <div class="div">
+            <div class="box-2"></div>
+            <div class="overlap-group-2">
+              <p class="text-wrapper" id="3">
+              </p>
+              <p class="username-2" id="o3"></p>
+            </div>
+          </div>
+        </div>
+        <div class="textbox-3 animation" style="display: none;" id="b4">
+          <div class="div">
+            <div class="box-2"></div>
+            <div class="overlap-group-2">
+              <p class="text-wrapper" id="4">
+              </p>
+              <p class="username-2" id="o4"></p>
+            </div>
+          </div>
+        </div>
+        <div class="textbox-4 animation" style="display: none;" id="b5">
+          <div class="overlap-group">
+            <div class="box"></div>
+            <p class="user-message" id="5">
+            </p>
+            <p class="username" id="o5"></p>
+          </div>
+        </div>
+        <div class="textbox-5 animation" style="display: none;" id="b6">
+          <div class="overlap-2">
+            <div class="box-3"></div>
+            <p class="p" id="6">
+            </p>
+            <p class="username-3" id="o6"></dpiv>
+          </div>
+        </div>
+        <div class="textbox-6 animation" style="display: none;" id="b7">
+          <div class="overlap-2">
+            <div class="box-3"></div>
+            <p class="p" id="7">
+            </p>
+            <p class="username-3" id="o7"></p>
+          </div>
+        </div>
+        <div class="textbox-7 animation" style="display: none;" id="b8">
+          <div class="overlap-2">
+            <div class="box-3"></div>
+            <p class="p" id="8">
+            </p>
+            <p class="username-3" id="o8"></p>
+          </div>
+        </div>
+        <div class="textbox-8 animation" style="display: none;" id="b9">
+          <div class="overlap-group">
+            <div class="box"></div>
+            <p class="user-message" id="9">
+            </p>
+            <p class="username" id="o9"></p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 

@@ -2,49 +2,18 @@
 <html>
 <head>
   <title>Mute the Confusion</title>
+  <link rel="stylesheet" href="../static/css/style.css" />
   <style>
-    /* @font-face {
-      font-family: Sunday;
-      src: url('../fonts/Sunday-Regular.ttf');
-    } */
     html {
       overflow: hidden;
       height: 100vh;
     }
     body {
-      /* background-color:black; */
+      background-color:black;
       height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
-    }
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    #form {
-      display: flex;
-      flex-direction: column;
-    }
-    #title {
-      position: absolute;
-      top: 10%;
-      /* color: white; */
-      font-size: 6rem;
-    }
-    #message-box {
-      /* font-family: 'Times New Roman', Times, serif; */
-      font-size: 18px;
-      width: 40vw;
-      height: 3vh;
-    }
-    /* #message-box:focus {
-      outline: none;
-    } */
-    .message {
-      /* color: white; */
-      animation: pulse 2s infinite;
     }
   </style>
   <script>
@@ -76,32 +45,46 @@
   </script>
 </head>
 <body>
-  <div id="title">MUTE THE CONFUSION</div>
-  <div class="container">
-    <form id="form">
-      <div>
-        <label for="message">ข้อความ</label>
-        <input type="text" id="message-box" name="message" placeholder="พิมพ์ข้อความ..." />
+  <div class="computer-input">
+    <div class="overlap-wrapper">
+      <div class="overlap">
+        <img class="rectangle" src="../static/img/rectangle-16.svg" />
+        <img class="img" src="../static/img/rectangle-17.svg" />
+        <img class="group" src="../static/img/group-17.svg" />
+        <div class="div">
+          <div class="text-wrapper">ในแบบของคุณได้ที่นี่ !!</div>
+          <div class="overlap-group">
+            <div class="text-wrapper-2">มาร่วมแบ่งปันวิธีการหา</div>
+            <div class="rectangle-2 "></div>
+            <div class="text-wrapper-3">ความสงบ</div>
+          </div>
+          <div class="overlap-2">
+            <div class="text-wrapper-4">ความวุ่นวาย</div>
+            <div class="text-wrapper-5">ท่ามกลาง</div>
+          </div>
+        </div>
+        <img class="line" src="../static/img/line-1.svg" />
+        <form id="form" autocomplete="off">
+          <div class="user-message-4">ข้อความ</div>
+          <div class="rectangle-3">
+            <textarea class="user-message" id="message-box" name="message" placeholder="พิมพ์ข้อความ"></textarea>
+          </div>
+          <div class="user-message-3">จาก</div>
+          <div class="rectangle-4"></div>
+          <input class="user-message-2"  id="from-box" name="from" placeholder="ใส่ชื่อ/นามแฝงของคุณ">
+          <div class="overlap-group-wrapper">
+            <button class="div-wrapper text-wrapper-6" id="submitBtn" type="submit">ยืนยันการส่ง</button>
+          </div>
+          <div class="group-2">
+            <button class="overlap-3 text-wrapper-7" id="cancelBtn" type="reset">ยกเลิก</button>
+        </form>
       </div>
-      <div>
-        <label for="from">จาก</label>
-        <input type="text" id="from-box" name="from" placeholder="ใส่ชื่อ/นามแฝงของคุณ..." />
+      
+ 
+        <img class="mute-logo" src="../static/img/mute-logo-1.svg" />
       </div>
-      <div>
-        <button type="reset">
-          Cancel
-        </button>
-        <button type="submit">
-          Submit
-        </button>
-      </div>
-    </form>
-    <!-- <button id="button0">
-      Button0
-    </button>
-    <button id="button1">
-      Button1
-    </button> -->
+    </div>
+  </div>
   </div>
 
 </body>
